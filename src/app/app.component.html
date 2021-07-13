@@ -1,0 +1,25 @@
+<nav
+  *ngIf="currentUser$ | async" 
+  class="navbar navbar-expand navbar-light bg-light shadow-sm" >
+  <div class="container">
+    <div class="navbar-nav">
+        <a 
+          class="nav-item nav-link"  
+          routerLink="profile" 
+          routerLinkActive="active">
+          Profile
+        </a>
+    </div>  
+    <div>
+      <button 
+        class="btn btn-secondary" 
+        (click)="logout()">
+          Logout
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-5">
+  <router-outlet></router-outlet>
+</div>
